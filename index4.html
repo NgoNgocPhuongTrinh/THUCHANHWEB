@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ketqua {
+            background-color: rgb(138, 163, 233);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="dulieu" placeholder="Nhập">
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    <script>
+        function kiemtra () {
+            var kq =document.getElementById("dulieu").value;
+            if(kq.trim()==="") {
+                document.getElementById("ketqua").textContent="Please input";
+
+            } else {
+                document.getElementById("ketqua").textContent= kq
+            }
+        }
+    </script>
+</body>
+</html>
