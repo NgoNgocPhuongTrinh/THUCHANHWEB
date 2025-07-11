@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            #start {
+                color:yellow;
+                gap:5px;
+            }
+        button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+        }
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Khảo sát phản hồi</h1>
+        Họ và tên: <input type="text"><br></br>
+        Email: <input type="text">
+        <p>Đánh giá</p>
+        <div class="start-rating">
+            <input type="radio" id="start" name="rating" value="5"><label for="start5">★</label>
+            <input type="radio" id="star" name="rating" value="2" ><label for="star4">★</label>
+            <input type="radio" id="star" name="rating" value="3" ><label for="star3">★</label>
+            <input type="radio" id="star" name="rating" value="4" ><label for="star2">★</label>
+            <input type="radio" id="star" name="rating" value="5" ><label for="star1">★</label>
+        </div>
+        <p>Ý kiến khác</p>
+        <textarea name="feedback" rows="3" cols="30" placeholder="Nhập ý kiến của bạn..."></textarea>
+        <br>
+        <button type="submit">Gửi</button>
+    </form>
+</body>
+</html>
