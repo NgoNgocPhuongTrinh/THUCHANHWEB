@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="sdt" placeholder="Nhập số điện thoại">
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id = "ketqua"></p>
+    <script>
+        function kiemtra() {
+            var sdt=document.getElementById("sdt").value;
+            var ktsdt= /^[0-9]{10}$/;
+            document.getElementById("ketqua").textContent = ktsdt.test(sdt) && sdt !== "" ? "true" : "false";
+        }
+    </script>
+</body>
+</html>

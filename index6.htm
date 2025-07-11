@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="so1" placeholder="Nhập số">
+    <input type="text" id="so2" placeholder="Nhập số">
+    <button onclick="Tinhtong()">Tính tổng</button>
+    <p id="ketqua"></p>
+    <script>
+        function Tinhtong() {
+            var s1=document.getElementById("so1").value;
+            var s2=document.getElementById("so2").value;
+            if (s1==="" || s2==="") {
+            document.getElementById("ketqua").textContent= "Vui lòng nhập cả 2 số ";}
+            else if(isNaN(s1) || isNaN(s2)) {
+                document.getElementById("ketqua").textContent="Vui lòng nhập số"
+            }
+            else {
+            s1=Number(s1)
+            s2=Number(s2)
+            var sum = s1 + s2
+            document.getElementById("ketqua").textContent="Tổng " + sum}
+            
+        }
+            
+        
+    </script>
+</body>
+</html>
