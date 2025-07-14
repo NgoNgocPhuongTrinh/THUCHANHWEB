@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+            textarea {
+            grid-column: span 2;
+            padding: 10px;
+            }
+            input {
+            padding: 10px;
+            }
+    </style>
+</head>
+<body>
+    <form class="booking-form">
+    <h2>Đặt bàn</h2>
+    <div class="grid-2col">
+      <input type="datetime-local">
+      <input type="number" placeholder="Số người">
+      <textarea placeholder="Yêu cầu đặc biệt"></textarea>
+    </div>
+  </form>
+</body>
+</html>

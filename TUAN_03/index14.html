@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .feedback-form {
+            display: grid;
+            gap: 10px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        .stars {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        }
+        input, textarea {
+        padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="feedback-form">
+    <h2>Phản hồi</h2>
+    <div class="stars">
+      <label>Đánh giá:</label>
+      <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+    </div>
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Góp ý..."></textarea>
+    <button>Gửi</button>
+  </form>
+</body>
+</html>
