@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="dulieu" placeholder="DD-MM-YYYY">
+    <button onclick="kq()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function kq() {
+            var dulieu = document.getElementById("dulieu").value;
+            var kiemtra = /^\d{2}-\d{2}-\d{4}$/;
+            if (!kiemtra.test(dulieu)) {
+                document.getElementById("hienthi").textContent = "Định dạng ngày tháng không hợp lệ";
+            }
+            var phan = dulieu.split("-");
+            var ngay = Number(phan[0]);
+            var thang = Number(phan[1]);
+            var nam = Number(phan[2]);
+            var date = new Date(nam, thang - 1, ngay);
+            if (date.getDate() == ngay && date.getMonth() == thang - 1 && date.getFullYear() == nam) {
+                document.getElementById("hienthi").textContent = "Ngày tháng năm hợp lệ";
+            } else {
+                document.getElementById("hienthi").textContent = "Ngày tháng năm không hợp lệ";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
