@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            background-color: red;
+            color: white;
+        }
+        
+        .success {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="phone" placeholder="Nhập số điện thoại">
+    <button onclick="kq()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function kq() {
+            var phone = document.getElementById("phone").value;
+            var hienthi = document.getElementById("hienthi");
+            if (phone === "") {
+                hienthi.textContent = "Vui lòng nhập số điện thoại";
+                hienthi.className = "error";
+            } else if (!/^0\d{9}$/.test(phone)) {
+                hienthi.textContent = "Vui lòng nhập số điện thoại";
+                hienthi.className = "error";
+            } else {
+                hienthi.textContent = "Số điện thoại: " + phone;
+                hienthi.className = "success";
+            }
+        }
+    </script>
+</body>
+
+</html>
