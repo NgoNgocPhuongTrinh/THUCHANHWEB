@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nhap" placeholder="Nhập">
+    <button onclick="dulieu ()">Click</button>
+    <p id="hienthi"></p>
+    <script>
+        function dulieu() {
+            var nhap = document.getElementById("nhap").value;
+            if (nhap === "") {
+                document.getElementById("hienthi").textContent = "Bạn chưa nhập gì"
+            } else if (!isNaN(nhap)) {
+                document.getElementById("hienthi").textContent = "Bạn mới nhập số"
+            } else {
+                document.getElementById("hienthi").textContent = "Bạn mới nhập text"
+            }
+        }
+    </script>
+</body>
+
+</html>
