@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            background-color: red;
+            color: white;
+        }
+        
+        .success {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="so" placeholder="Nhập số">
+    <button onclick="kq()">Check</button>
+    <p id="hienthi" class="mau"></p>
+    <script>
+        function kq() {
+            var so = document.getElementById("so").value;
+            var hienthi = document.getElementById("hienthi");
+            if (so === "") {
+                hienthi.textContent = "Vui lòng nhập số";
+                hienthi.className = "mau error";
+            } else if (isNaN(so)) {
+                hienthi.textContent = "Vui lòng nhập số";
+                hienthi.className = "mau error";
+            } else {
+                hienthi.textContent = "Bạn đã nhập số " + so;
+                hienthi.className = "mau success";
+            }
+        }
+    </script>
+</body>
+
+</html>
