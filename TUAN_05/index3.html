@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="ngaysinh">
+    <button onclick="kq()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function kq() {
+            var mydate = new Date(ngaysinh.value);
+            console.log(mydate)
+            var today = new Date();
+            console.log(today)
+            if (mydate > today) {
+                document.getElementById("hienthi").textContent="Ngày sinh không hợp lệ"
+            } else {
+                var age = today.getFullYear() - mydate.getFullYear();
+                document.getElementById("hienthi").textContent="Tuổi của bạn là " + age
+            }
+        }
+    </script>
+</body>
+</html>
