@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="Date" id="inputdate">
+    <button onclick="btncheck()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function btncheck() {
+            var mydate = document.getElementById("inputdate").value;
+            console.log(mydate)
+            var today = new Date();
+            if (mydate > today) {
+                document.getElementById("hienthi").textContent = "Ngày sinh không hợp lệ";
+            } else {
+                document.getElementById("hienthi").textContent = "Ngày sinh của bạn là: " + mydate
+            }
+        }
+    </script>
+</body>
+
+</html>
