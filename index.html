@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dung {
+            color: green;
+        }
+        
+        .sai {
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <input type="text" id="dulieu" placeholder="Nhập email của bạn">
+    <button onclick="kqemail()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function kqeamil() {
+            var email = document.getElementById("dulieu").value;
+            var regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+            if (regex.test(email)) {
+                document.getElementById("hienthi").textContent = "Email hợp lệ"
+                hienthi.className = "dung"
+            } else {
+                document.getElementById("hienthi").textContent = "Email không hợp lệ"
+                hienthi.className = "sai"
+            }
+        }
+    </script>
+    <input type="text" id="sdt" placeholder="Nhập sđt của bạn">
+    <button onclick="kqsdt()">Check</button>
+    <p id="hienthi2"></p>
+    <script>
+        function kqsdt() {
+            var sdt = document.getElementById("sdt").value;
+            if (!/^0\d{9}$/.test(sdt)) {
+                document.getElementById("hienthi2").textContent = "Số điện thoại không hợp lệ"
+                hienthi2.className = "sai"
+            } else {
+                document.getElementById("hienthi2").textContent = "Số điện thoại hợp lệ"
+                hienthi2.className = "dung"
+            }
+        }
+    </script>
+    <input type="text" id="pass" placeholder="Nhập mật khẩu của bạn">
+    <button onclick="kqpass()">Check</button>
+    <p id="hienthi3"></p>
+    <script>
+        function kqpass() {
+            var pass = document.getElementById("pass").value;
+            if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(sdt)) {
+                document.getElementById("hienthi3").textContent = "Mật khẩu không hợp lệ"
+                hienthi3.className = "sai"
+            } else {
+                document.getElementById("hienthi3").textContent = "Mật khẩu hợp lệ"
+                hienthi3.className = "dung"
+            }
+
+        }
+    </script>
+    <input type="text" id="name" placeholder="Nhập họ tên của bạn">
+    <button onclick="kqname()">Check</button>
+    <p id="hienthi4"></p>
+    <script>
+        function kqname() {
+            var name = document.getElementById("name").value;
+            if (name === "") {
+                document.getElementById("hienthi4").textContent = "Không được để trống"
+                hienthi4.className = "sai"
+            } else if (!/^[a-zA-ZÀ-ỹ\s]+$/.test(name)) {
+                document.getElementById("hienthi4").textContent = "Họ tên không hợp lệ"
+                hienthi4.className = "sai"
+            } else {
+                document.getElementById("hienthi4").textContent = "Họ tên của bạn là " + name
+                hienthi4.className = "dung"
+            }
+        }
+    </script>
+    <input type="date" id="ngay">
+    <button onclick="kqngay()">check</button>
+    <p id="hienthi5"></p>
+    <script>
+        function kqngay() {
+            var ngay = document.getElementById("ngay").value;
+            var today = new Date().toISOString().split("T")[0];
+            if (ngay === "") {
+                document.getElementById("hienthi5").textContent = "Vui lòng nhập ngày sinh"
+                hienthi5.className = "sai"
+            } else if (ngay > today) {
+                document.getElementById("hienthi5").textContent = "Ngày sinh không hợp lệ"
+                hienthi5.className = "sai"
+            } else {
+                document.getElementById("hienthi5").textContent = "Ngày sinh hợp lệ"
+                hienthi5.className = "dung"
+            }
+
+        }
+    </script>
+    <input type="text" id="user" placeholder="Nhập thông tin của bạn">
+    <button onclick="kquser()">Check</button>
+    <p id="hienthi6"></p>
+    <script>
+        function kquser() {
+            var user = document.getElementById("user").value;
+            if (user === "") {
+                document.getElementById("hienthi6").textContent = "Không được để trống"
+                hienthi6.className = "sai"
+            } else if (!/^[a-zA-Z0-9_]{5,15}$/.test(user)) {
+                document.getElementById("hienthi6").textContent = "Không hợp lệ"
+                hienthi6.className = "sai"
+            } else {
+                document.getElementById("hienthi6").textContent = "thông tin của bạn là " + user
+                hienthi6.className = "dung"
+            }
+        }
+    </script>
+    <input type="text" id="user" placeholder="Nhập thông tin của bạn">
+    <button onclick="kquser()">Check</button>
+    <p id="hienthi6"></p>
+    <script>
+        function kquser() {
+            var user = document.getElementById("user").value;
+            if (user === "") {
+                document.getElementById("hienthi6").textContent = "Không được để trống"
+                hienthi6.className = "sai"
+            } else if (!/^[a-zA-Z0-9_]{5,15}$/.test(user)) {
+                document.getElementById("hienthi6").textContent = "Không hợp lệ"
+                hienthi6.className = "sai"
+            } else {
+                document.getElementById("hienthi6").textContent = "thông tin của bạn là " + user
+                hienthi6.className = "dung"
+            }
+        }
+    </script>
+</body>
+
+</html>
