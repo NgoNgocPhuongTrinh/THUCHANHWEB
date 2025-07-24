@@ -154,5 +154,61 @@
             }
         }
     </script>
+    <input type="text" id="ma" placeholder="Nhập mã bưu điện">
+    <button onclick="kqma()">Check</button>
+    <p id="hienthi8"></p>
+    <script>
+        function kqma() {
+            var ma = document.getElementById("ma").value;
+            if (ip==="") {
+                document.getElementById("hienthi8").textContent="Vui lòng nhập mã bưu điện";
+                hienthi8.className = "sai";
+            } else if (!/^\d{5}$/.test(ma)) {
+                document.getElementById("hienthi8").textContent="Mã bưu điện không hợp lệ";
+                hienthi8.className = "sai";
+            } else {
+                document.getElementById("hienthi8").textContent="Mã bưu điện là " + ma
+                hienthi8.className = "dung"
+            }
+        }
+    </script>
+    <input type="text" id="ttd" placeholder="Nhập số thẻ tín dụng">
+    <button onclick="kqttd()">Check</button>
+    <p id="hienthi9"></p>
+    <script>
+        function kqttd() {
+        var ttd = document.getElementById("ttd").value;
+        var regex = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+        if (ttd==="") {
+            document.getElementById("hienthi9").textContent="Vui lòng nhập số thẻ";
+            hienthi9.className ="sai";
+        } else if (!regex.test(ttd)) {
+            document.getElementById("hienthi9").textContent="Số thẻ không hợp lệ";
+            hienthi9.className ="sai";
+        } else {
+            document.getElementById("hienthi9").textContent="Thẻ tín dụng của bạn là " + ttd;
+            hienthi9.className ="dung";
+        }
+        }
+    </script>
+    <input type="text" id="url" placeholder="Nhập URL">
+    <button onclick="kqurl()">Check</button>
+    <p id="hienthi10"></p>
+    <script>
+        function kqurl() {
+            var url = document.getElementById("url").value;
+            var regex = /[-a-zA-Z0-9@:%_\+.~#?&//-]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-90:%_\+.~#?&//-]*)?/
+            if (url==="") {
+                document.getElementById("hienthi10").textContent="Vui lòng nhập URL";
+                hienthi10.className="sai";
+            } else if (!regex.test(url)) {
+                document.getElementById("hienthi10").textContent="URL không hợp lệ";
+                hienthi10.className = "sai";
+            } else {
+                document.getElementById("hienthi10").textContent="URL của bạn là " + url;
+                hienthi10.className = "dung";
+            }
+        }
+    </script>
 </body>
 </html>
