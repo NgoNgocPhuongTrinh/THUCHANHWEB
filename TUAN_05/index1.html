@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="Date" id="inputdate">
+    <button onclick="btncheck()">Check</button>
+    <p id="hienthi"></p>
+    <script>
+        function btncheck() {
+            var today = new Date();
+            var mydate = new Date(inputdate.value);
+            console.log(today)
+            if (today < mydate) {
+                console.log("Future")
+                document.getElementById("hienthi").textContent = "Ngày nhập là ngày tương lai";
+            } else {
+                document.getElementById("hienthi").textContent = "Ngày nhập là ngày quá khứ"
+                console.log("Pass")
+            }
+        }
+    </script>
+</body>
+
+</html>
